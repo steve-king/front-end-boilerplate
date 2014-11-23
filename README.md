@@ -9,22 +9,22 @@ Assuming you already have Node, Grunt and Bower installed:
 - clone the project, cd to directory
 - run `npm install` 
 - then `bower install`
-- then `grunt init` - to initial compile
-- then `grunt` - to run watch/serve
+- then `grunt init` - initial compile
+- then `grunt` - watch/serve
 
 ## Features:
 
 - grunt-sass for lightning fast SASS compilation (much quicker than grunt-contrib-sass)
 - Bower for JS library source control
-- wiredep for automatically linking to bower JS dependencies in the footer, in correct order. Runs on all HTML files found in root with `<!-- bower:js -->` tags 
-- jshint with "jshint-stylish" output
-- grunticon and svgmin for automated icon CSS output - runs on any SVG files found in dev/images/svg-src by default.
-- watch triggers are broken up by file type, and are optimised for speed with grunt-newer.
-- Nodemon runs a Node server in parallel with the watch task to serve up files on localhost. 
-- Server.js parses HTML files in the dev folder as EJS templates, allowing you to use EJS `<% include file.html %>` tags during dev, and then render out into flat HTML during build.
-- grunt-usemin will concatenate and minify/uglify files linked to from within `<!-- build -->` tags in your HTML and replace refs to the minified assets in build folder.
-- imagemin compressions
-- Twitter Bootstrap for quick prototyping, easily customisable to import only the stuff you need
+- Automatic linking of bower dependencies within `<!-- bower:js -->` tags (wiredep).
+- jshint with "jshint-stylish" output.
+- Automated SVG icon CSS generation using grunticon and svgmin, with PNG image fallback .
+- Watch handlers are broken up by file type and optimised for speed with grunt-newer.
+- Nodemon runs a Node server in parallel with the watch task to serve up files on your localhost. 
+- Server.js parses HTML files in the dev folder as EJS templates, allowing use of  `<% include %>` tags, which then render out into flat HTML files during build.
+- Concatenated/minified/uglified assets within `<!-- build -->` tags. grunt-usemin replaces refs with links to the minified assets.
+- Image compression using imagemin.
+- Twitter Bootstrap for quick prototyping, easily customisable to import only the stuff you want (defaults to CSS grid only)
 
 ### Gruntfile.js
 You can change the locaton of the dev and build folders in the "paths" object near the top of the Gruntfile. By default these are set to `dev` and `build`. Note: you'll also need to update the dev folder location in the `.bowerrc` file.
