@@ -1,7 +1,7 @@
 Front-end Boilerplate
 =====================
 
-A Node, Grunt and Bower powered, quick start boilerplate for fully optimised front-end builds.
+A Node, Grunt and Bower powered, quick start boilerplate for fully optimised, static front-end builds.
 
 ## Usage
 
