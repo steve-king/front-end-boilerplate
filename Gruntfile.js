@@ -271,7 +271,12 @@ module.exports = function(grunt) {
 
 		// Render out EJS template tags in the below HTML files to temp folder
 		render: {
-			temp: {
+			index: {
+				options: {
+					data : {
+						'env' : 'build'
+					}
+				},
 				files: {
 					'<%=paths.temp%>/index.html': ['<%=paths.dev%>/index.html']
 				}
@@ -348,7 +353,7 @@ module.exports = function(grunt) {
 		// Any extra processes that need to happen first go here
 		// e.g concatenating Node EJS templates into a single, flat HTML file
 		// Or vendor prefixing sass output before minification?
-		'render:temp',
+		'render:index',
 		
 		// Copy any remaining files from dev->temp. 
 		// - Any files processed by previous tasks in this chain will need to be excluded in the copy:temp task configuration above
