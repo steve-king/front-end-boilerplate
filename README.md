@@ -26,13 +26,6 @@ Assuming you already have Node, Grunt and Bower installed:
 - imagemin compressions
 - Twitter Bootstrap for quick prototyping, easily customisable to import only the stuff you need
 
-
-
-### Bootstrap
-Twitter bootstrap-sass-official is the only bower dependency included, and currently configured import CSS only. If you really want to get tall the JS too, remove the "overrides" object for bootstrap in `bower.json` before you run `bower install` 
-
-To customise the SCSS parts of bootsrap that are imported, edit `dev/scss/bootstrap-custom.scss` and uncomment components as needed. At the moment, only mixins, normalize (css reset), grid, responsive utilities, and helper classes are imported. The variables needed to adjust the grid have been copied into `dev/scss/variables.scss` from  `bower_components/bootstrap-sass-official/assets/stylesheets/bootsrap/variables.scss` - you will need to grab any extra vars for any other components you import from this file.
-
 ### Gruntfile.js
 You can change the locaton of the dev and build folders in the "paths" object near the top of the Gruntfile. By default these are set to `dev` and `build`. Note: you'll also need to update the dev folder location in the `.bowerrc` file.
 
@@ -53,3 +46,8 @@ You will need to add a new route here for any new HTML templates you add to your
 ### EJS template rendering
 Currently, grunt-ejs-render does not allow `files : { expand: true }` at the moment, so you will also have to add new HTML templates to this task definition in the Gruntfile
 - TODO: Link to JSON files for dynamic content...
+
+### Bootstrap
+Twitter bootstrap-sass-official is the only bower dependency included, and currently configured import CSS only. If you really want to get tall the JS too, remove the "overrides" object for bootstrap in `bower.json` before you run `bower install` 
+
+To customise the SCSS parts of bootsrap that are imported, edit `dev/scss/bootstrap-custom.scss` and uncomment components as needed. At the moment, only mixins, normalize (css reset), grid, responsive utilities, and helper classes are imported. The variables needed to adjust the grid have been copied into `dev/scss/variables.scss` from  `bower_components/bootstrap-sass-official/assets/stylesheets/bootsrap/variables.scss` - you will need to grab any extra vars for any other components you import from this file.
