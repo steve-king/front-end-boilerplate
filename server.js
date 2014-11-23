@@ -11,7 +11,11 @@ app.set('views', root_dir);
 
 // Add routes to your HTML templates as needed
 app.get('/', function(req, res){
-	res.render('index.html');
+	res.render('index.html', {
+		data : {
+			env : process.env.ROOT_FOLDER
+		}
+	});
 });
 
 // Register a static route to the root_dir
