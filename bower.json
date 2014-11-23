@@ -1,0 +1,16 @@
+{
+  "name": "front-end-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.1",
+    "fastclick": "~1.0.3"
+  },
+  "overrides": {
+    "bootstrap-sass-official": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss"
+      ]
+    }
+  }
+}

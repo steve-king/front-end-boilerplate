@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Front-end boilerplate</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- build:css css/style.min.css -->    
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- endbuild -->
+
+	<!-- Load SVG or PNG icons, depending on browser -->
+	<script src="js/grunticon.loader.js"></script>
+	<script>grunticon(["css/icons-svg-embedded.css", "css/icons-png-embedded.css", "css/icons-png-url.css"])</script>
+	<noscript><link href="css/icons-png-url.css" rel="stylesheet"></noscript>
+	<!-- END SVG -->
+</head>
+<body>
+
+	<div class="site-container">
+		
+		<% include includes/site-header.html %>
+		
+		<main id="site_main" class="site-main">
+			<p>Test SVG icon: <span class="icon-test">Twitter</span></p>
+		</main>
+		
+		<% include includes/site-footer.html %>
+		
+	</div><!-- END .site-container -->	
+
+	<!-- build:js js/app.min.js -->
+	<!-- bower:js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/fastclick/lib/fastclick.js"></script>
+	<!-- endbower -->
+	<!-- Place custom script links below this line -->
+	<script src="js/main.js"></script>	
+	<!-- endbuild -->
+</body>
+</html>
+

@@ -1,0 +1,9 @@
+/* Custom CSS template for grunticon as default does not include width and height */
+
+.icon-test {
+	background-image: url('../images/icons-png/test.png');
+	width:24px;
+	height:24px;
+}
+
+

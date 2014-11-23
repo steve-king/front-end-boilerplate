@@ -1,0 +1,47 @@
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+html{
+    font-size:62.5%;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+	font-family: sans-serif;
+    @include font-size(16);
+}
+
+
+// ICONS
+// ------------------------------------------
+// this could be added to icons.hbs for tidyness, but results in a flash of unhidden text before icons are loaded
+[class^="icon-"], [class*=" icon-"] {
+	display:inline-block;
+	vertical-align:middle;
+	overflow: hidden;
+    text-indent: -9999px; // Hide any text within the icon
+    background-repeat: no-repeat;
+	background-position:center center;	
+
+	// Icon sizing with background-size
+	&.icon-24 {
+		width:24px;
+		height:24px;
+		background-size:cover;
+	}
+
+	&.icon-36 {
+		width:36px;
+		height:36px;
+		background-size:cover;
+	}
+
+	&.icon-48 {
+		width:48px;
+		height:48px;
+		background-size:cover;
+	}
+}
